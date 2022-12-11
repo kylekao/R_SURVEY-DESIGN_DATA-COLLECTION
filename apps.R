@@ -16,6 +16,7 @@ table(app.df$app_glitch)
 table(app.df$app_thirdparty)
 
 corrplot(cor(app.df[,c(9,8:15)]),method = 'ellipse', type = 'upper')
+
 modelapp <- lm(app_booking ~ app_reviews + app_hostcommunicate + app_sortfeature + app_selfcheck + app_glitch + app_thirdparty, data = app.df)
 summary (modelapp)
 
